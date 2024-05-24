@@ -87,10 +87,31 @@
 
         <div class="section-title" id="about">
           <h2>About</h2>
+          
+          <p>The advancement of 3D reconstruction encourages researchers to reconstruct vehicles from large-scale self-driving datasets for the simulation of corner-case scenes, like vehicle accidents. 
+            However, the reconstructed 3D cars are typically low-quality and suffer from numerous artifacts due to insufficient training views and the lack of high-resolution images. 
+            Therefore, there is an imperative need for a dataset capable of reconstructing high-quality 3D cars for the simulation of corner-case scenes. 
+            </p>
+            <br>
 
-          <p>The advancement of 3D reconstruction techniques encourages researchers to reconstruct vehicles from large-scale self-driving datasets for the simulation of dangerous scenes, like vehicle accidents. However, the reconstructed 3D cars are typically low-quality and contain a mass of artifacts due to the lack of sufficient training views and low-resolution images.
-Therefore, a dataset, that can be used to reconstruct high-quality cars for the simulation of corner-case scenes, is imperative. In this paper, we collect the first large-scale 3D real car dataset, termed 3DRealCar, offering three distinctive features: (1) \textbf{High-Volume}: 2500 cars are meticulously scanned by 3D scanners to obtain their point cloud, representing their actual size in real-world scenes. (2)\textbf{ High-Quality}: Every car provides an average of 200 dense 360-degree views, enabling high-fidelity 3D reconstruction. (3) \textbf{High-Diversity}: The dataset contains a wide variety of car characteristics, with 6 different car types in more than 20 various colors. In addition, these cars are collected in three different lighting conditions, such as reflective, standard, and dark.
-For data preprocessing, we design a pipeline to remove background point clouds and rectify the car orientation of the point cloud for a unified axis, which ensures the reconstruction focuses solely on the car, facilitating more accurate 3D reconstruction and enabling the control of rendered views. We benchmark 3D reconstruction results with state-of-the-art methods for each task in 3DRealCar. Particularly, we find our dataset brings an insight that recent 3D reconstruction methods struggle to reconstruct 3D cars in two extremely lighting conditions, reflective and dark.  Extensive experiments demonstrate that the standard lighting condition of 3DRealCar can be used to reconstruct high-quality 3D car assets, simulate photorealistic corner-case scenes, and improve downstream tasks. We hope this dataset will contribute to the development of 3D reconstruction and the advancement of car-related tasks. Our dataset is available here.</p>
+          <p>
+            In this paper, we propose the first large-scale 3D real car dataset, termed 3DRealCar, offering three distinctive features: 
+            (1)High-Volume: The dataset comprises 2500 cars meticulously scanned by 3D scanners to obtain point cloud representing their real-world dimension. 
+            (2)High-Quality: Each car is captured with an average of 200 dense, high-resolution 360-degree views, enabling high-fidelity 3D reconstruction.
+            (3)High-Diversity: The dataset contains diverse car characteristics, encompassing six various car types in over twenty colors. 
+            More importantly, these cars are collected under three distinct lighting conditions, such as reflective, standard, and dark. 
+
+          </p>
+          <br>
+
+          <p>
+            To ensure the reconstruction only on the car, we design a pipeline to remove background point clouds and standardize the car orientation to a unified axis.
+             This process facilitates more accurate 3D reconstruction and enables the control of rendered views.
+              We benchmark 3D reconstruction results with state-of-the-art methods across each lighting condition in 3DRealCar.
+               Notably, our dataset brings insight that recent 3D reconstruction methods face significant challenges when reconstructing 3D cars under reflective and dark lighting conditions. 
+                Extensive experiments demonstrate the standard lighting condition within 3DRealCar enables the reconstruction of high-quality 3D cars for the later simulation of photorealistic corner-case scenes and improves performances in car-related tasks. 
+                We anticipate this dataset will contribute to advancing 3D reconstruction and car-related tasks. Our dataset is available here.
+            </p>
         </div>
 
         <div class="row" data-aos="fade-up">
