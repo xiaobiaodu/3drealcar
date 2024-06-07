@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>3DRealCar: The first large-scale 3D car dataset </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Updated: May 7 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>3DRealCar</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="active " href="index.html">Home</a></li>
+          <li><a href="download.html">Download</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+
+
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero No Slider Section ======= -->
+  <section id="hero-no-slider" class="d-flex justify-cntent-center align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-8">
+          <h2>Welcome to 3DRealCar</h2>
+          <p>The first large-scale 3D real car dataset containing 2500 cars captured in real-world scenes. We hope 3DRealCar can serve as a valuable resource to promote car-related tasks.</p>
+          <a href="#about" class="btn-get-started ">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero No Slider Sectio -->
+
+  <main id="main">
+
+
+
+
+    <!-- ======= Features Section ======= -->
+    <section class="features">
+      <div class="container">
+
+        <div class="section-title" id="about">
+          <h2>About</h2>
+          
+          <p>3D cars are commonly used in self-driving systems, virtual/augmented reality, and games. 
+            However, existing 3D car datasets are either synthetic or low-quality, presenting a significant gap toward the high-quality real-world 3D car datasets and limiting their applications in practical scenarios. 
+            </p>
+            <br>
+
+          <p>
+            In this paper, we propose the first large-scale 3D real car dataset, termed 3DRealCar, offering three distinctive features.
+             (1) High-Volume: 2,500 cars are meticulously scanned by 3D scanners, obtaining car images and point clouds with real-world dimensions; 
+             (2) High-Quality: Each car is captured in an average of 200 dense, high-resolution 360-degree RGB-D views, enabling high-fidelity 3D reconstruction; 
+             (3) High-Diversity: The dataset contains various cars from over 100 brands, collected under three distinct lighting conditions, including reflective, standard, and dark.
+              Additionally, we offer detailed car parsing maps for each instance to promote research in car parsing tasks.
+          </p>
+          <br>
+
+          <p>
+            Moreover, we remove background point clouds and standardize the car orientation to a unified axis for the reconstruction only on cars without background and controllable rendering.
+            We benchmark 3D reconstruction results with state-of-the-art methods across each lighting condition in 3DRealCar.
+            Extensive experiments demonstrate that the standard lighting condition part of 3DRealCar can be used to produce a large number of high-quality 3D cars, improving various 2D and 3D tasks related to cars.
+            Notably, our dataset brings insight into the fact that recent 3D reconstruction methods face challenges in reconstructing high-quality 3D cars under reflective and dark lighting conditions. 
+            </p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <img src="assets/img/teaser.png" class="img-fluid" alt="">
+        </div>
+    </div>
+
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Distributions</h2>
+            <p>Our dataset mainly contains six different car types.
+             We also count the number of different lighting conditions on cars.
+              the standard condition means the car is well-lighting and without strong specular highlights.
+              The reflective condition means the car has specular highlights.
+              Glossy materials bring huge challenges to recent 3D reconstruction methods.
+              The dark condition means the car is captured in an underground parking and not well-lighting.
+              The number of captured images per car is an average of 200. The number of views ranges from 50 to 400.
+              Our dataset contains more than twenty colors, but the white and black colors still take up most of our dataset.
+              In addition, we also show the distribution of car size, in terms of their length, width, and height.  </p>
+
+          <img src="assets/img/dis.png" class="img-fluid" alt="">
+
+          </div>
+      </div>
+
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Supported Tasks</h2>
+            <p>Since our dataset provides RGB-D images, point clouds, car parsing maps, and detailed annotations, we can conduct various 2D and 3D tasks in it. 
+              Specifically, we provide car parsing maps, indicating our dataset can be used for car detection, segmentation, and parsing tasks. 
+              Moreover, our captured RGB-D images support the depth estimation task.
+              Since we collect various car types with diverse appearances, researchers can use our dataset for domain transfer learning with different car types. 
+              As for 3D tasks, our captured dense views and point clouds can be employed for 3D  reconstruction, 3D generation, novel view synthesis, vehicular point cloud completion, and vehicular point cloud parsing. 
+              With reconstructed 3D cars, we can use them to simulate corner-case scenarios for training a robust self-driving perception system. </p>
+
+          <img src="assets/img/tasks.png" class="img-fluid" alt="">
+
+          </div>
+      </div>
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Reconstructed Results</h2>
+            <p>We show visualization in our dataset with recent state-of-the-art 3D reconstruction method, 3DGS (Gaussian Splatting).
+                To the standard lighting condition,  3DGS is capable of reconstructing relatively high-quality 3D cars from our dataset.
+                Note that this level of reconstructing quality is enough to be utilized and rendered for downstream tasks.
+                However, the reflective and dark conditions results are not promising.
+                Therefore, these two parts of our 3DRealCar bring two challenges to recent 3D methods. </p>
+            <br>
+
+                <p>The first challenge is the reconstruction of specular highlights.
+                Due to the particular property of cars, materials of car surfaces are generally glossy,
+                which means it would produce plenty of specular highlights if cars are exposed to the sun or strong light. </p>
+            <br>
+
+                <p>The second challenge is the reconstruction in a dark environment.
+                The training images captured in the dark environment lost plenty of details for reconstruction.
+                Therefore, how to achieve high-quality reconstruction results from these two extremely lighting conditions is a challenge
+                to recent methods. </p>
+
+            <br>
+                <p>We hope these results can encourage subsequent research for the 3D reconstruction in awful conditions. </p>
+
+
+
+        </div>
+
+        <div class="video-container_std">
+            <div class="video-title">Standard</div>
+            <video autoplay muted loop playsinline>
+                <source src="assets/video/standard_reencoded.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+
+
+
+
+     <div class="video-container">
+
+
+
+            <div class="video-item">
+                <div class="video-title">Reflective</div>
+                <video autoplay muted loop playsinline>
+                    <source src="assets/video/reflective_reencoded.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-item">
+                <div class="video-title">Dark</div>
+                <video autoplay muted loop playsinline>
+                    <source src="assets/video/dark6_reencoded.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+
+
+      </div>
+
+    </section><!-- End Features Section -->
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+    <div class="container">
+      <div class="copyright">
+<!--        &copy; Copyright <strong><span>Li Auto Inc</span></strong>. All Rights Reserved-->
+        &copy; Copyright <strong><span>XXX</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
